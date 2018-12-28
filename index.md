@@ -1,11 +1,3 @@
-<<<<<<< HEAD
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
----
-=======
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/apurvgh/apurvgh.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
@@ -43,4 +35,3 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
->>>>>>> c2bf85051fd6f276c8a989b78fca91a674d7c3f7
