@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -21,7 +20,7 @@ description: Tech, Travel and more..
   #line in _config.yml. It will appear in your document head meta (for
   #Google search results) and in your feed.xml site description.
 baseurl: "https://blogs.apurvghai.com" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blogs.apurvghai.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: apurvgh
 github_username:  apurvgh
 
@@ -43,8 +42,4 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 repository: "apurvgh/apurvgh.github.io"
-=======
-theme: jekyll-theme-architect
-title: Apurv's Blog
 
->>>>>>> c2bf85051fd6f276c8a989b78fca91a674d7c3f7
