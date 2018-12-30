@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ page.title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/blog-post.css" rel="stylesheet">
+    <script id="dsq-count-scr" src="//apurv-blogs.disqus.com/count.js" async></script>
+  </head>
+
+  <body>
+
+     <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Apurv's Blog</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Programming">Programming</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Travel</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Title -->
+          <h1 class="mt-4">{{ page.title }}</h1>
+
+          <!-- Author -->
+          <p class="lead">by apurvgh
+          </p>
+
+          <!-- Date/Time -->
+          <!-- TODO -->
+
+          <hr>
+
+          <!-- Post Content -->
+          {{ content }}
+
+          <hr>
+
+          
+          <!-- Disqus Comment -->
+          <div class="media mb-4">
+              <div id="disqus_thread"></div>
+              <script>
+              var url = window.location.href;
+              var identifier = window.location.pathname.replace(/\//g,'-');
+              var host = "localhost:4000";
+             
+              var disqus_config = function () {
+              this.page.url = url;  
+              this.page.identifier = identifier; 
+              };
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://apurv-blogs.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+              </script>
+              <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  
+          </div>
+
+          <!-- Comment with nested comments -->
+          <div class="media mb-4">
+                                      
+          </div>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          <!-- Search Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Search</h5>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+               <!-- Categories Widget -->
+               <div class="card my-4">
+                  <h5 class="card-header">Categories</h5>
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              {% for category in site.categories %}
+                                {{ category[0] }}&nbsp;&nbsp;
+                              {% endfor %}
+                          </div>
+                    </div>
+                  </div>
+                </div>
+
+       
+          <!-- Side Widget -->
+          <div class="card my-4">
+              <h5 class="card-header">Follow Me</h5>
+              <div class="card-body">
+                  <a href="https://twitter.com/apurvghai?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @apurvghai</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </div>
+  
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
