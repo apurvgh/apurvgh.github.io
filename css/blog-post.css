@@ -13,3 +13,29 @@ body {
     padding-top: 56px;
   }
 }
+h1, .mt-4 {
+ font-size: 1.3em;
+}
+h5{
+  font-size: 1em;
+}
+#highlight{
+  background-color: #eaecef;
+  margin:3px;
+}
+table, td, thead, tr{
+  border: 1px dotted black;
+}
+.post{
+  color: orange;
+  font-size: 1em;
+  font-weight: 600;
+}
+#hint{
+  background-color: #eaecef;
+  padding: 4px;
+  margin: 4px;
+}
+.lead{
+  font-size: 0.8em;
+}
