@@ -19,18 +19,28 @@ description: Tech, Travel and more..
   #Write an awesome description for your new site here. You can edit this
   #line in _config.yml. It will appear in your document head meta (for
   #Google search results) and in your feed.xml site description.
-#baseurl: "https://blogs.apurvghai.com" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://blogs.apurvghai.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: apurvgh
 github_username:  apurvgh
-
+ 
+theme: jekyll-theme-primer
 # Build settings
 markdown: kramdown
+highlighter: rouge
+incremental: true
+gist:
+   noscript: false
+kramdown:
+   math_engine: mathjax
+   syntax_highlighter: roug
+
 plugins:
   - jekyll-feed
   - jekyll-menus
-
-
+  - jekyll-seo-tag
+  - jekyll-sitemap
+disqus: apurv-blogs
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

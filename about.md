@@ -3,16 +3,4 @@ title: About
 permalink: /about/
 ---
 
-## About
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+My name is Apurv, I am father, programmer, blogger. I work for Microsoft in Dynamics 365 Support team as Support Escalation Engineer. I can speak Hindi, English, C#, Java and a little bit of python :P. I have decidicated this website to my colleagues, programmers who can benefit with tips and tricks to program in different languages. I do plan to introduce *Travel* section later which will talk about the places I have visited. I will then share my experiences and tips on lodging, local siteseeing, food and more.. Keep visiting!
