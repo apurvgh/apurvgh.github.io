@@ -1,25 +1,7 @@
 
-    
-    <!-- Bootstrap core CSS -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/landing-page.min.css" rel="stylesheet">
-
-  </head>
-
   <body>
-
-
    <!-- Navigation -->
      {% include navigation.html %}
-
-
     <!-- Masthead -->
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
@@ -44,8 +26,29 @@
       </div>
     </header>
 
-    <!-- Icons Grid -->
-    <section class="features-icons bg-light text-center">
+    <section class="testimonials text-center bg-light">
+        <div class="container">
+            <h2 class="mb-5">Latest Posts</h2>
+                <div class="row">
+                    {% for post in site.posts %}
+                    {% for category_name in post.categories %}
+                      {% if category_name == "dynamicscrmsdk" %}
+                      <div class="col-sm-1"><div class="post-title-icon"><i class="fas fa-book"></i></div></div>
+                      <div class="col-sm-5">
+                        <div class="post-title">
+                         <a href="{{ post.url }}">{{ post.title }} </a><br>
+                            {{ post.PostDate | date: "%b %d, %y" }} | <i class="ag_categories">{{ post.ag_categories}} </i></div>
+                          </div>
+                      {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+        </div>
+    </section>
+
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -66,15 +69,18 @@
               <p class="lead mb-0">Sharing my traveling experiences when traveling around the world</p>
             </div>
           </div>
-      
+
         </div>
       </div>
     </section>
 
+
+  
+
     <!-- Image Showcases -->
     <section class="showcase">
       <div class="container-fluid p-0">
-       
+
         <div class="row no-gutters">
           <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
@@ -92,13 +98,6 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials text-center bg-light">
-      <div class="container">
-        <!-- Add the commentor box -->
-      </div>
-    </section>
-
 
     <!-- Footer -->
     <footer class="footer bg-light">
@@ -107,7 +106,7 @@
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
             <ul class="list-inline mb-2">
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="/about">About</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
@@ -127,17 +126,17 @@
           <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
             <ul class="list-inline mb-0">
               <li class="list-inline-item mr-3">
-                <a href="https://www.linkedin.com/in/apurvghai/">
+                <a href="https://www.linkedin.com/in/apurvghai/"  target="_blank">
                   <i class="fab fa-linkedin fa-2x fa-fw"></i>
                 </a>
               </li>
               <li class="list-inline-item mr-3">
-                <a href="https://www.twitter.com/apurvghai/">
+                <a href="https://www.twitter.com/apurvghai/"  target="_blank">
                   <i class="fab fa-twitter-square fa-2x fa-fw"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.instagram.com/apurvghai/">
+                <a href="https://www.instagram.com/apurvghai/"  target="_blank">
                   <i class="fab fa-instagram fa-2x fa-fw"></i>
                 </a>
               </li>
@@ -147,9 +146,7 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  {% include scripts.html %}
 
   </body>
 

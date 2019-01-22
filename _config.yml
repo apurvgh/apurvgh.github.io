@@ -15,16 +15,20 @@
 # in the templates via {{ site.myvariable }}.
 title: Apurv's Blog
 email: 
-description: Tech, Travel and more..
+description: You will find blogs about different technologies. I usually share tips on various things I have worked on like Dynamics CRM SDK, Graph API, Exchange APIs.
   #Write an awesome description for your new site here. You can edit this
   #line in _config.yml. It will appear in your document head meta (for
   #Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "https://blogs.apurvghai.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://apurvghai.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: apurvgh
 github_username:  apurvgh
- 
+author_first_name: Apurv
+author_last_name: Ghai
+sass:
+  style: :compressed
 theme: jekyll-theme-primer
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
