@@ -61,10 +61,8 @@ ul, menu, dir {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center;
-  margin-top: -10px;
+    margin-top: -10px;
   font-size: 1em;
-  height:24px;
 }
 .footer{
   height: 1px;
