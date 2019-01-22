@@ -19,9 +19,8 @@ h1, .mt-4 {
 h5{
   font-size: 1em;
 }
-#highlight{
-  background-color: #eaecef;
-  margin:3px;
+.highlight{
+  padding: 10px;
 }
 table, td, thead, tr{
   border: 1px dotted black;
@@ -38,4 +37,35 @@ table, td, thead, tr{
 }
 .lead{
   font-size: 0.8em;
+  font-weight: 600;
+  color: darkgoldenrod;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+ul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  margin-top: -10px;
+  font-size: 1em;
+  height:24px;
+}
+.footer{
+  height: 1px;
 }
