@@ -1,21 +1,38 @@
-.ag_categories{
+.ag_categories {
     color: crimson;
     font-size: 0.8em;
     font-weight: 400;
-  }
-  .fa-book{
-    margin-right:  5px;
+}
+
+.fa-book {
+    margin-right: 5px;
     color: dimgray;
     font-size: 2em;
-  }
-  .post-title-icon{
-    text-align: right !important; 
+}
+
+.post-title-icon {
+    text-align: right !important;
     margin-top: 14px;
     margin-right: -30px;
-  }
-  .post-title{
-    text-align: left !important; 
+}
+
+.post-title {
+    text-align: left !important;
     padding: 5px;
-  }
- 
-  
+}
+
+.hello-message {
+    margin-top: 5px;
+    padding: 10px;
+    color: #000;
+    background-color: #e0f2ff;
+    border-color: #e0f2ff;
+}
+body {
+    font-family: Arial;
+    font-size: 0.9em;
+}
+.seperator-top-bottom {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
