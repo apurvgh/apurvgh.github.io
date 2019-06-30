@@ -28,7 +28,7 @@ author_last_name: Ghai
 sass:
   style: :compressed
 theme: jekyll-theme-primer
-
+future: true
 # Build settings
 markdown: kramdown
 highlighter: rouge

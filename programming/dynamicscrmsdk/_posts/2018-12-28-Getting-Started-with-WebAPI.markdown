@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-default
 title:  "Getting Started with WebAPI"
 date:   2018-12-28 10:32:00 -0600
 PostDate: 2018-12-28
