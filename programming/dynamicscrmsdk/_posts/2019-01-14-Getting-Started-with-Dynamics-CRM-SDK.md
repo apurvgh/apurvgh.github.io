@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-default
 title:  Getting started with Dynamics 365 CRM SDK in C#
 date:   2019-01-14 11:00:00 -0600
 PostDate: 2019-01-14
