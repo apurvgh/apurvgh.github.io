@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Apurv's Blog
+title: Apurv's Blog - Travel, Programming and more..
 email: 
 description: You will find blogs about different technologies. I usually share tips on various things I have worked on like Dynamics CRM SDK, Graph API, Exchange APIs.
   #Write an awesome description for your new site here. You can edit this
