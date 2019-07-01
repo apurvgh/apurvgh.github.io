@@ -4,7 +4,7 @@ layout: post-default
 ---
 
 
-<img src="/img/m1.jpg" width="200px" height="160px">
+<img src="/img/m1.JPG" width="200px" height="160px">
 
 My name is Apurv, I am a father, programmer and a blogger. 
 I work for Microsoft as an Embedded Escalation Engineer supporting Dynamics 365 product line. 
