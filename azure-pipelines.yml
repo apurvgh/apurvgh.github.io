@@ -19,5 +19,9 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script: bundle exec rake
-  displayName: 'bundle exec rake'
+
+- script: |
+    bundle install
+    jekyll build
+  displayName: 'jekyll'
+
