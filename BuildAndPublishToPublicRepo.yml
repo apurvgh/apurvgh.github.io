@@ -20,11 +20,13 @@ steps:
       git config --local user.name "apurvgh"
           git config --local user.email "apurv.ghai@outlook.com"
           git add .
-
-- task: DownloadSecureFile@1
+- task: InstallSSHKey@0
   inputs:
-    secureFile: 'deploy_key'
-    retryCount: '2'
+    knownHostsEntry: '*'
+    sshPublicKey: 'ssh-rsa $DOWNLOADSECUREFILE_SECUREFILEPATH'
+    sshPassphrase: '$PARAPHRASE'
+    sshKeySecureFile: 'deploy_key1'
+
 
 - task: CmdLine@2
   inputs:
@@ -32,6 +34,6 @@ steps:
       mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-          git remote set-url --push origin https://github.com/apurvgh/apurvgh.github.io.git
+          git remote set-url --push origin git@github.com:apurvgh@apurvgh.github.io.git
           git checkout -b users/apurvgh/$(Build.BuildNumber)
           git push origin users/apurvgh/$(Build.BuildNumber)
