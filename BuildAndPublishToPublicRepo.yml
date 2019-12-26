@@ -14,26 +14,19 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      git config --local user.name "apurvgh"
-          git config --local user.email "apurv.ghai@outlook.com"
-          git add .
 - task: InstallSSHKey@0
   inputs:
     knownHostsEntry: '*'
-    sshPublicKey: 'ssh-rsa $DOWNLOADSECUREFILE_SECUREFILEPATH'
-    sshPassphrase: '$PARAPHRASE'
+    sshPublicKey: $DOWNLOADSECUREFILE_SECUREFILEPATH
+    sshPassphrase: $env:$PARAPHRASE
     sshKeySecureFile: 'deploy_key'
 
-
-- task: CmdLine@2
+- task: Bash@3
   inputs:
+    targetType: 'inline'
     script: |
-      mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-          git remote set-url --push origin git@github.com:apurvgh@apurvgh.github.io.git
-          git checkout -b users/apurvgh/$(Build.BuildNumber)
-          git push origin users/apurvgh/$(Build.BuildNumber)
+      git config --global user.name "apurvgh"
+      git config --global user.email "apurv.ghai@outlook.com"
+      git remote set-url --push origin git@github.com:apurvgh@apurvgh.github.io.git
+      git checkout -b users/apurvgh/$(Build.BuildNumber)
+      git push origin users/apurvgh/$(Build.BuildNumber)
