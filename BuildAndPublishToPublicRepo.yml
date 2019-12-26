@@ -14,37 +14,24 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-- script: |
-    gem install bundler
-    bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
-
-
-- script: |
-    bundle install
-    jekyll build
-  displayName: 'jekyll'
-
-
-- script: |
-    ./docs.sh
-    git config --local user.name "apurvgh"
-    git config --local user.email "apurv.ghai@outlook.com"
-    git add .
-    displayName: 'Build and commit pages'
+- task: CmdLine@2
+  inputs:
+    script: |
+      git config --local user.name "apurvgh"
+          git config --local user.email "apurv.ghai@outlook.com"
+          git add .
 
 - task: DownloadSecureFile@1
   inputs:
-    secureFile: deploy_key
-  displayName: 'Get the deploy key'
+    secureFile: 'deploy_key'
+    retryCount: '2'
 
-- script: |
-    mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
-    chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
-    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-    git remote set-url --push origin git@github.com:apurvgh/apurvgh.github.io.git
-    git push origin HEAD:master
-  displayName: 'Publish GitHub Pages'
-  condition: |
-    and(not(eq(variables['Build.Reason'], 'PullRequest')),
-        eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+- task: CmdLine@2
+  inputs:
+    script: |
+      mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
+          chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+          git remote set-url --push origin git@github.com:apurvgh/apurvgh.github.io.git
+          git checkout -b users/apurvgh/$(Build.BuildNumber)
+          git push origin users/apurvgh/$(Build.BuildNumber)
