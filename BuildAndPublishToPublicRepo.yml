@@ -1,0 +1,50 @@
+# Ruby
+# Package your Ruby project.
+# Add steps that install rails, analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/ruby
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.5'
+
+- script: |
+    gem install bundler
+    bundle install --retry=3 --jobs=4
+  displayName: 'bundle install'
+
+
+- script: |
+    bundle install
+    jekyll build
+  displayName: 'jekyll'
+
+
+- script: |
+    ./docs.sh
+    git config --local user.name "apurvgh"
+    git config --local user.email "apurv.ghai@outlook.com"
+    git add .
+    displayName: 'Build and commit pages'
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: deploy_key
+  displayName: 'Get the deploy key'
+
+- script: |
+    mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
+    chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+    git remote set-url --push origin git@github.com:apurvgh/apurvgh.github.io.git
+    git push origin HEAD:master
+  displayName: 'Publish GitHub Pages'
+  condition: |
+    and(not(eq(variables['Build.Reason'], 'PullRequest')),
+        eq(variables['Build.SourceBranch'], 'refs/heads/master'))
