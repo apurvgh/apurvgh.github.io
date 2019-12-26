@@ -26,7 +26,7 @@ steps:
     targetType: 'inline'
     script: |
       git config --global user.name "apurvgh"
-      git config --global user.email "apurv.ghai@outlook.com"
+      git config --global user.email $GITHUB_EMAIL
       git remote set-url --push origin git@github.com:apurvgh/apurvgh.github.io.git
       git checkout -b users/apurvgh/$(Build.BuildNumber)
       git push origin users/apurvgh/$(Build.BuildNumber)
