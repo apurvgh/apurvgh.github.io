@@ -25,7 +25,7 @@ steps:
     knownHostsEntry: '*'
     sshPublicKey: 'ssh-rsa $DOWNLOADSECUREFILE_SECUREFILEPATH'
     sshPassphrase: '$PARAPHRASE'
-    sshKeySecureFile: 'deploy_key1'
+    sshKeySecureFile: 'deploy_key'
 
 
 - task: CmdLine@2
