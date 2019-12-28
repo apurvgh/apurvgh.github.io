@@ -14,14 +14,19 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-- script: |
-    gem install bundler
-    bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
+- task: InstallSSHKey@0
+  inputs:
+    knownHostsEntry: '*'
+    sshPublicKey: $(sshpublickey)
+    sshPassphrase: $(PARAPHRASE)
+    sshKeySecureFile: 'deploy_key'
 
-
-- script: |
-    bundle install
-    jekyll build
-  displayName: 'jekyll'
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      git config --global user.name "apurvgh"
+      git config --global user.email $GITHUB_EMAIL
+      git remote set-url --push origin git@github.com:apurvgh/apurvgh.github.io.git
+      git checkout -b users/apurvgh/$(Build.BuildNumber)
+      git push origin users/apurvgh/$(Build.BuildNumber)
