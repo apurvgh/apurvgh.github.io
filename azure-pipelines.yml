@@ -19,7 +19,7 @@ steps:
     knownHostsEntry: '*'
     sshPublicKey: $(sshpublickey)
     sshPassphrase: $(PARAPHRASE)
-    sshKeySecureFile: 'deploy_key'
+    sshKeySecureFile: 'devOpsTogitHub'
 
 - task: Bash@3
   inputs:
