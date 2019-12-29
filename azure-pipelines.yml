@@ -14,14 +14,22 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-- script: |
-    gem install bundler
-    bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
 
-
-- script: |
-    bundle install
-    jekyll build
-  displayName: 'jekyll'
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      
+      echo 'Set Global Settings'
+      git config --global user.name "apurvgh"
+      git config --global user.email $GITHUB_EMAIL
+      
+      echo 'Set Remote URL'
+      git remote set-url --push origin $GIT_HTTP
+      
+      echo 'Begin Checkout'
+      echo 'Branch Name users/apurvgh/$(Build.BuildNumber)'
+      git checkout -b users/apurvgh/$(Build.BuildNumber)
+      
+      echo 'Begin Push'
+      git push origin users/apurvgh/$(Build.BuildNumber)
