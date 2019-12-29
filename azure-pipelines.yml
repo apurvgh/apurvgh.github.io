@@ -27,11 +27,11 @@ steps:
     script: |
       
       echo 'Set Global Settings'
-      git config --global user.name "apurvgh"
+      git config --user.name user.name "apurvgh"
       git config --global user.email $GITHUB_EMAIL
       
       echo 'Set Remote URL'
-      git remote set-url --push origin git@github.com:apurvgh/apurvgh.github.io.git
+      git remote set-url --push origin $GIT_HTTP
       
       echo 'Begin Checkout'
       echo 'Branch Name users/apurvgh/$(Build.BuildNumber)'
