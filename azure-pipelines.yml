@@ -13,29 +13,3 @@ steps:
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.5'
-
-- task: InstallSSHKey@0
-  inputs:
-    knownHostsEntry: '*'
-    sshPublicKey: $(sshpublickey)
-    sshPassphrase: $(PARAPHRASE)
-    sshKeySecureFile: 'deploy_key1'
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      
-      echo 'Set Global Settings'
-      git config --user.name user.name "apurvgh"
-      git config --global user.email $GITHUB_EMAIL
-      
-      echo 'Set Remote URL'
-      git remote set-url --push origin $GIT_HTTP
-      
-      echo 'Begin Checkout'
-      echo 'Branch Name users/apurvgh/$(Build.BuildNumber)'
-      git checkout -b users/apurvgh/$(Build.BuildNumber)
-      
-      echo 'Begin Push'
-      git push origin users/apurvgh/$(Build.BuildNumber)
