@@ -4,4 +4,4 @@ _site
 Gemfile.lock
 stock-imgs
 .jekyll-metadata
-.vs/*.*
+.vs

@@ -27,6 +27,16 @@ steps:
       echo 'Set Remote URL'
       git remote set-url --push origin $GIT_HTTP
       
+      echo 'Init Pull on Master'
+      git pull master
+      
+      echo 'Current Status'
+      git status
+      git add .
+      
+      echo 'New Status'
+      git status
+
       echo 'Begin Checkout'
       echo 'Branch Name users/apurvgh/$(Build.BuildNumber)'
       git checkout -b users/apurvgh/$(Build.BuildNumber)
