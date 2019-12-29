@@ -84,5 +84,42 @@ Read and enjoy!
                     </div>
                 </div>
             </div>
+            <!-- New row-->
+            <div class="row seperator-top-bottom">
+                <div class="col-lg-12 seperator-top-bottom">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h5 class="mb-3"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Power Automate</h5>
+                            <div class="col-xs-12">
+                                {% for post in site.posts %}
+                                {% for category_name in post.categories %}
+                                {% if category_name == "powerautomate" %}
+                                <div class="post-title">
+                                    <a href="{{ post.url }}">{{ post.title }} </a><br>
+                                    {{ post.PostDate | date: "%b %d, %y" }} | <i class="ag_categories">{{ post.ag_categories}} </i>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="mb-3"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Logic Apps</h5>
+                            <div class="col-xs-12">
+                                {% for post in site.posts %}
+                                {% for category_name in post.categories %}
+                                {% if category_name == "graphapi" %}
+                                <div class="post-title">
+                                    <a href="{{ post.url }}">{{ post.title }} </a><br>
+                                    {{ post.PostDate | date: "%b %d, %y" }} | <i class="ag_categories">{{ post.ag_categories}} </i>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
