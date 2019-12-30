@@ -108,7 +108,7 @@ Read and enjoy!
                             <div class="col-xs-12">
                                 {% for post in site.posts %}
                                 {% for category_name in post.categories %}
-                                {% if category_name == "graphapi" %}
+                                {% if category_name == "logicapps" %}
                                 <div class="post-title">
                                     <a href="{{ post.url }}">{{ post.title }} </a><br>
                                     {{ post.PostDate | date: "%b %d, %y" }} | <i class="ag_categories">{{ post.ag_categories}} </i>
