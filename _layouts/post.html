@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
+<head>
     {% include metatags.html %}
     {% include theme.html %}
     {% include googleanalytics.html %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!-- Custom styles for this template -->
-    <link href="/css/blog-post.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-     <!-- Navigation -->
-     {% include navigation.html %}
+    <link href="/css/landing-custom.css" rel="stylesheet">
+<link href="/css/blog-post.css" rel="stylesheet">
+</head>
+   
+<body>
+    <!-- Navigation -->
+    {% include navigation.html %}
+    <!-- Header -->
+    <header class="bg-subtle py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 text-muted mt-5 mb-2">{{ page.title }} </h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Page Content -->
     <div class="container">
 
-      <div class="row">
+        <div class="row">
 
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
+            <!-- Post Content Column -->
+            <div class="col-lg-12">
+                {% if page.author == "apurvghai"  %}
+                <!-- Author information -->
+                <p class="lead">
+                    {{ page.PostDate }} <b></b>|<b></b>  {{ page.author }} <b></b>|<b></b> {{page.lang}}
+                    {% include jsondata.html %}
+                    {% endif  %}
+                </p>
 
-          <!-- Title -->
-          <h1 class="mt-4">{{ page.title }}</h1>
+                <hr>
+                <p>
+                    {% include breadcrumb.html %}
+                </p>
 
-          {% if page.author == "apurvghai"  %}
-              <!-- Author information -->
-             <p class="lead">{{ page.PostDate }} <b></b>|</b>  {{ page.author }} <b></b>|</b> {{page.lang}}
-             {% include jsondata.html %}
-          {% endif  %}  
-        </p>
-        <hr>
-        <p>
-            {% include breadcrumb.html %}
-        </p>
-          
-          
-          <!-- Post Content -->
-          {{ content }}
-          <hr>
+
+                <!-- Post Content -->
+                {{ content }}
+                <hr>
+
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+
+
+            </div>
 
         </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
-        
-
-        </div>
-
-      </div>
-      <!-- /.row -->
-      <!-- disqus -->
-      {% if page.author == "apurvghai"  %}
+        <!-- /.row -->
+        <!-- disqus -->
+        {% if page.author == "apurvghai"  %}
         {% include disqus.html %}
 
-      {% endif  %}  
+        {% endif  %}
     </div>
     <!-- /.container -->
-
     <!-- Footer -->
-      {% include footer.html %}
+    {% include footer.html %}
 
     <!-- Bootstrap core JavaScript -->
-      {% include scripts.html %}
+    {% include scripts.html %}
 
-  </body>
-
-</html>
+</body>
+   
+   </html>

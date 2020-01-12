@@ -14,7 +14,7 @@ I was recently doing a project at work where I needed to trigger logic apps insi
 
  In order for us to trigger logic apps, the app must be designed to accept _HTTP_ requests. To learn more about it, you can follow this link to [official documentation](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-http-endpoint). 
 
- Let's pretent that we have following `JSON` payload
+ Let's pretend that we have following `JSON` payload
 
  ```json
  {

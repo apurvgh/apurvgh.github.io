@@ -25,24 +25,17 @@
 
     <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
             <!-- Post Content Column -->
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 {% if page.author == "apurvghai"  %}
                 <!-- Author information -->
                 <p class="lead">
-                    {{ page.PostDate }} <b></b>|<b></b>  {{ page.author }} <b></b>|<b></b> {{page.lang}}
+                    {{ page.PostDate }} <b></b>|<b></b>  {{ page.author }} <b></b> | {{ page.ag_categories}} | <b></b> {{page.lang}}
                     {% include jsondata.html %}
                     {% endif  %}
                 </p>
-
                 <hr>
-                <p>
-                    {% include breadcrumb.html %}
-                </p>
-
 
                 <!-- Post Content -->
                 {{ content }}
@@ -51,18 +44,32 @@
             </div>
 
             <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
-
-
-
+            <div class="col-lg-4">
+                   <h5 class="card-title"><strong>Recent Posts</strong></h5>
+                    <div class="card-body">
+                        <span class="card-text">
+                            {% assign currentPageCategory = page.ag_categories %}
+                            {% for post in site.posts limit: 10%}
+                            {% for category_name in post.ag_categories %}
+                            {% if category_name == currentPageCategory %}
+                            <div class="post-title">
+                                <a href="{{ post.url }}">{{ post.title }} </a><br>
+                                {{ post.PostDate | date: "%b %d, %y" }} | <i class="ag_categories">{{ post.ag_categories}} </i>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                        </span>
+                    </div>
             </div>
+
+            </div></div>>
 
         </div>
         <!-- /.row -->
         <!-- disqus -->
         {% if page.author == "apurvghai"  %}
         {% include disqus.html %}
-
         {% endif  %}
     </div>
     <!-- /.container -->

@@ -1,6 +1,6 @@
 ---
 title: Programming
-layout: post-default
+layout: post
 ---
 
 Hey folks! Welcome to my programming section. I have figured my thing is APIs so I have put together some interesting reads on my favorite technologies using different programming languages.
