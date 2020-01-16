@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include metatags.html %}
+    {% include theme.html %}
+    {% include googleanalytics.html %}
+    
+    <!-- Custom styles for this template -->
+    <link href="/css/landing-custom.css" rel="stylesheet">
+    <link href="/css/blog-post.css" rel="stylesheet">
+    <script async src="https://cse.google.com/cse.js?cx=007025087230605707219:h2w89kj8c6z"></script>
+</head>
+   
+<body>
+    <!-- Navigation -->
+    {% include navigation.html %}
+    <!-- Header -->
+    <header class="bg-subtle py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 text-muted mt-5 mb-2">{{ page.title }} </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Post Content Column -->
+            <div class="col-lg-12">
+                
+                <div class="gcse-searchresults-only"></div>
+                
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- disqus -->
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <!-- Bootstrap core JavaScript -->
+    {% include scripts.html %}
+
+</body>
+   
+   </html>
+
