@@ -45,6 +45,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 disqus: apurv-blogs
+feed:
+ tags: true
+ excerpt_only: true
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -55,6 +59,17 @@ disqus: apurv-blogs
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
-#   - vendor/ruby/
+#   - vendor/ruby/  
 repository: "apurvgh/apurvgh.github.io"
+collections:
+  posts:
+    output: true
 
+paginate: 10
+paginate_path: "/page:num/"
+
+image_pool:
+  - /img/ai-startup-office-software-developer-typing-computer-keyboard-close-up.jpg
+  - /img/programming-script-text-coding-words.jpg
+  - /img/double-exposure-caucasian-man-virtual-reality-vr-headset-is-presumably-gamer-hacker-cracking-code-into-secure-network-server-with-lines-code.jpg
+  - /img/technician-looking-ui-computer-monitor-executing-programming-code.jpg

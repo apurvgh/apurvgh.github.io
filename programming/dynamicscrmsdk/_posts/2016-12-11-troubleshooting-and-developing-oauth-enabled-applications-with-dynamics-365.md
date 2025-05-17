@@ -4,7 +4,9 @@ title: Troubleshooting and developing oauth enabled applications with Dynamics 3
 date: 2016-12-11 16:51:57 - 0600
 PostDate: 2016-12-11
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/troubleshooting-and-developing-oauth-enabled-applications-with-dynamics-365
 lang: C#
 ---
 OAuth applications can be developed using Dynamics 365 Online and OnPremise versions. Let's see these in more details:

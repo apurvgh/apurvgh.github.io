@@ -4,7 +4,9 @@ title: CRM Plug-in Development - What should you be aware of?
 date: 2012-9-18 1:48:0 - 0600
 PostDate: 2012-9-18
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/crm-plug-in-development-what-should-you-be-aware-of
 lang: C#
 ---
 <div class="blogSite">

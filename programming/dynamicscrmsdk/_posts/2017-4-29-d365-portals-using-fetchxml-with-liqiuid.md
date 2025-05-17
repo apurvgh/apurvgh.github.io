@@ -4,7 +4,9 @@ title: D365 Portals - Using FetchXML with Liqiuid
 date: 2017-4-29 12:5:8 - 0600
 PostDate: 2017-4-29
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/d365-portals-using-fetchxml-with-liqiuid
 lang: C#
 
 ---

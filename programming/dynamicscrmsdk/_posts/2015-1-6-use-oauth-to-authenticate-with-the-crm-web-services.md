@@ -4,7 +4,9 @@ title: Use OAuth to Authenticate with the CRM Web Services
 date: 2015-1-6 11:52:0 - 0600
 PostDate: 2015-1-6
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/use-oauth-to-authenticate-with-the-crm-web-services
 lang: C#
 ---
 <p>Hey guys,<br /><br /> Today I'm going to talk about an interesting sample on Windows store apps which will go connect with CRM using Oauth.</p>

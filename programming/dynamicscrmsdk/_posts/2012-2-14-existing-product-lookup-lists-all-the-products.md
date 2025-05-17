@@ -4,7 +4,9 @@ title: Existing product lookup lists all the products
 date: 2012-2-14 23:13:0 - 0600
 PostDate: 2012-2-14
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/existing-product-lookup-lists-all-the-products
 lang: C#
 ---
 <div class="blogSite">

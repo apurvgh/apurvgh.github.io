@@ -4,7 +4,9 @@ title: Dynamics 365 - WebAPI Crud Operations (JavaScript)
 date: 2016-11-6 15:1:1 - 0600
 PostDate: 2016-11-6
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/dynamics-365-webapi-crud-operations
 lang: JavaScript
 ---
 Hey Guys,

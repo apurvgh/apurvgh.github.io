@@ -4,7 +4,9 @@ title: Implementing authentication using CRM v4 SDK
 date: 2011-9-7 3:50:0 - 0600
 PostDate: 2011-9-7
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/implementing-authentication-using-crm-v4-sdk
 lang: C#
 ---
 <p>

@@ -4,7 +4,8 @@ title:  "Customize your build number"
 date:   2019-06-21 16:15:00 -0600
 PostDate: 2019-06-21
 author: apurvghai
-ag_categories: AzureDevOps
+category: azuredevops
+category_title: Azure DevOps
 lang: Yaml
 ---
 

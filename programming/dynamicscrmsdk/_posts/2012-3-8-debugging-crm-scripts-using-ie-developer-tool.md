@@ -4,7 +4,9 @@ title: Debugging CRM scripts using IE developer tool
 date: 2012-3-8 23:5:0 - 0600
 PostDate: 2012-3-8
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/debugging-crm-scripts-using-ie-developer-tool
 lang: C#
 ---
 <div class="blogsite">

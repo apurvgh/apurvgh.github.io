@@ -4,7 +4,8 @@ title:  Connector Series - Power Automate Zendesk Custom Connector
 date:   2019-12-28 20:43:00 -0600
 PostDate: 2019-12-28
 author: apurvghai
-ag_categories: Power Automate
+category: powerautomate
+category_title: Power Automate
 lang: 
 ---
 

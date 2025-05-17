@@ -4,7 +4,8 @@ title:  "Using Postman with Dynamics 365 Online and OnPremise"
 date:   2019-01-14 10:40:00 -0600
 PostDate: 2019-01-14
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
 lang: Postman, General
 ---
 

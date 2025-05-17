@@ -4,7 +4,9 @@ title: CRM Early Bound Entity Classes in Code Vs. .NET Traditional LINQ (Entity 
 date: 2013-4-26 16:3:0 - 0600
 PostDate: 2013-4-26
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/crm-early-bound-entity-classes-in-code-vs-net-traditional-linq-entity-framework
 lang: C#
 ---
 <p class="body">Hello Folks,</p>

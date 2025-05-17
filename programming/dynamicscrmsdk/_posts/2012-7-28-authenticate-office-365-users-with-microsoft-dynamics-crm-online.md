@@ -4,7 +4,9 @@ title: Authenticate Office 365 Users with Microsoft Dynamics CRM Online
 date: 2012-7-28 23:41:0 - 0600
 PostDate: 2012-7-28
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/ssis-2008-integration-with-crm-2011-on-premise
 lang: C#
 ---
 <div class="blogsite">

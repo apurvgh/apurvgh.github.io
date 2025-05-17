@@ -4,8 +4,10 @@ title: Create your custom web service and integrate with CRM 2011 Online
 date: 2011-8-25 15:56:0 - 0600
 PostDate: 2011-8-25
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
 lang: C#
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/create-your-custom-web-service-and-integrate-with-crm-2011-online
 ---
 <p class="blogsite">I hope this article can help you understand when you need to create a middleware between CRM system and a Legacy system/or custom application.The below example talks about the &ldquo;<strong>contact</strong>&rdquo; entity where the web service accepts the &ldquo;<strong><em>lastname</em></strong>&rdquo; attribute of it and inserts the same into CRM system. The end result is the guid which is retrieved and confirms the successful execution of the operation.</p>
 <h4 class="blogsite">Before we get started, here&rsquo;s the list of requirements</h4>

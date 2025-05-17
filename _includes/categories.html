@@ -1,12 +1,19 @@
-{% if page.author == "apurvghai"  %}
-<div class="card my-4">
-  <h5 class="card-header">Tags</h5>
-  <div class="card-body">
-      <div class="row">
-          <div class="col-lg-12">
-            {{ page.categories | join: ' ' }}
-          </div>
+<h4 class="section-title">Tech Stack</h4>
+<div class="row g-3 flex-wrap">
+  {% assign categories = site.posts | map: "category" | uniq %}
+  {% for cat in categories %}
+  {% assign cat_count = 0 %}
+  {% for post in site.posts %}
+  {% if post.category == cat %}
+  {% assign cat_count = cat_count | plus: 1 %}
+  {% assign cat_title = post.category_title %}
+  {% endif %}
+  {% endfor %}
+  <div class="col-6 col-md-12">
+    <div class="category-box d-flex align-items-center p-3 bg-light rounded shadow-sm">
+      <img src="/img/bg-showcase-4.jpg" alt="{{ cat }}" width="40" class="me-3" />
+      <a href="/programming/{{ cat }}" target="_blank" title="Articles on {{ cat_title }}" data-toggle="tooltip" data-placement="top" rel="noopener"><span class="fw-semibold ag_nav-text ">{{ cat_title }} ({{ cat_count }})</span></a>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endif  %}

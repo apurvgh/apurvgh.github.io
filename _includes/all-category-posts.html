@@ -1,0 +1,34 @@
+{% assign currentPageCategory = page.category %}
+
+<section class="content-section flex-wrap" style="margin-bottom: 65px;" title="All Posts">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Latest Posts -->
+            <div class="col-md-12">
+              
+                <div class="row g-4">
+                    {% for post in site.posts %}
+                    {% for category_name in post.category %}
+                    {% if category_name == currentPageCategory %}
+                    <div class="col-12">
+                        <div class="card h-100 flex-md-row">
+                            
+                            <div class="card-body">
+                                <h5 class="card-title post-title">{{ post.title }}</h5>
+                                <p class="card-text text-muted">{{ post.date | date: "%B %d, %Y" }} · {{
+                                    post.category_title }}</p>
+                                <p class="card-text post-subtitle">{{ post.excerpt | strip_html | truncate: 250 }}
+                                </p>
+                                <a href="{{ post.url }}" class="btn btn-outline-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Read more about {{ post.title | strip_html }}">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -4,7 +4,9 @@ title: Create a new business process programmatically with multiple entities
 date: 2015-2-13 16:38:0 - 0600
 PostDate: 2015-2-13
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/create-a-new-business-process-programmatically-with-multiple-entities
 lang: C#
 ---
 <p>Hey Guys,</p>
