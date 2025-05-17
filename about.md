@@ -1,13 +1,9 @@
 ---
 title: About
-layout: post-default
+layout: page
 ---
 
 
 <img src="/img/m1.JPG" width="200px" height="160px">
 
-My name is Apurv, I am a father, programmer and a blogger. 
-I work for Microsoft as an Embedded Escalation Engineer supporting Dynamics 365 product line. 
-
-I can speak Hindi, English, C#, Java and a bit of python :P. I have dedicated this website to my colleagues, programmers who can benefit from my tips and tricks to program in different languages. 
-I do plan to introduce Travel section later which will talk about the places I have visited. I will then share my experiences and tips on lodging, local sightseeing, food and more.. Keep visiting!
+ Hi, I'm Apurv! I'm a troubleshooter, a blogger, and a dad which basically means I'm fueled by coffee and troubleshooting products and code. I work at Microsoft as an Pr. Embedded Escalation Engineer, where I spend my time troubleshooting Dataverse & Power Platform. I dabble in C#, UI Scripting, Python. This blog is dedicated to all you amazing developers out there. I'm sharing my hard-earned tips and tricks so you can avoid the mistakes I've already made. So, grab a virtual coffee, and let's get reading!

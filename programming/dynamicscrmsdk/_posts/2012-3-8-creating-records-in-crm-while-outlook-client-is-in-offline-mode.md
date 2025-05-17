@@ -4,7 +4,9 @@ title: Creating records in CRM while Outlook client is in offline mode.
 date: 2012-3-8 22:33:0 - 0600
 PostDate: 2012-3-8
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/creating-records-in-crm-while-outlook-client-is-in-offline-mode
 lang: C#
 ---
 <div class="blogsite">

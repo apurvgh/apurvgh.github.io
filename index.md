@@ -1,3 +1,4 @@
 ---
-layout: default
+layout: Home
+paginate: 10
 ---

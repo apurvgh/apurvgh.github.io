@@ -4,7 +4,9 @@ title: Configure Azure and create dynamics 365 apps using OAuth, WebAPI (C#)
 date: 2016-12-3 21:21:38 - 0600
 PostDate: 2016-12-3
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/configure-azure-and-create-crm-apps-using-oauth-webapi
 lang: C#
 ---
 Hey Everyone

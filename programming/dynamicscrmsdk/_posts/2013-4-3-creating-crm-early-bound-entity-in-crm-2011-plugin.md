@@ -4,7 +4,9 @@ title: Creating CRM Early bound entity in CRM 2011 Plugin
 date: 2013-4-3 16:42:0 - 0600
 PostDate: 2013-4-3
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/creating-crm-early-bound-entity-in-crm-2011-plugin
 lang: C#
 ---
 <p>Hello Guys,</p>

@@ -4,7 +4,9 @@ title: Tool  for troubleshooting authentication using CRM SDK
 date: 2014-7-25 12:41:0 - 0600
 PostDate: 2014-7-25
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/tool-for-troubleshooting-authentication-using-crm-sdk
 lang: C#
 ---
 Hello Folks, Finally I was able to spend some time out to work on shorter code for CRM connection using late bound approach. More than the helper concept the idea is about a universal application which can help you troubleshoot/isolate the issues with CRM authentication.

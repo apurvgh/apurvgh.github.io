@@ -4,7 +4,9 @@ title: Enable/Disable out of the box ribbon items
 date: 2012-4-5 0:33:0 - 0600
 PostDate: 2012-4-5
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/enabledisable-out-of-the-box-ribbon-items
 lang: C#
 ---
 <div class="blogsite">

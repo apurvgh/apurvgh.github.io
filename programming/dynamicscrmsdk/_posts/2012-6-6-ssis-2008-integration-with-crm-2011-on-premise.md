@@ -4,7 +4,9 @@ title: SSIS 2008 Integration with CRM 2011 on-Premise
 date: 2012-6-6 3:22:0 - 0600
 PostDate: 2012-6-6
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/ssis-2008-integration-with-crm-2011-on-premise
 lang: C#
 ---
 

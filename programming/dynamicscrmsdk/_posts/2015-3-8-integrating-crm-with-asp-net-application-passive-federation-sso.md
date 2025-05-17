@@ -4,7 +4,9 @@ title: Integrating CRM with ASP.NET Application (Passive federation - SSO)
 date: 2015-3-8 14:39:0 - 0600
 PostDate: 2015-3-8
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/integrating-crm-with-asp-net-application-passive-federation-sso
 lang: C#
 ---
 <p>Hey Guys, <br /><br /> I went back a little got this sample out from my source directory. Today I'm expanding a bit on existing sample for building an SSO based application to integrate with Dynamics CRM. I have collated few samples and concepts from below articles: <br /><br /></p>

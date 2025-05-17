@@ -4,7 +4,8 @@ title:  "Versioning your assemblies through build pipelines"
 date:   2019-06-21 17:15:00 -0600
 PostDate: 2019-06-21
 author: apurvghai
-ag_categories: AzureDevOps
+category: azuredevops
+category_title: Azure DevOps
 lang: Yaml, Powershell
 ---
 

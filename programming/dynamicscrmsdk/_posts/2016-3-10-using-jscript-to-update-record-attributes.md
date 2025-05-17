@@ -4,7 +4,9 @@ title: WebAPI Series 1 - Using Jscript to update record attributes
 date: 2016-3-10 0:44:17 - 0600
 PostDate: 2016-3-10
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/using-jscript-to-update-record-attributes
 lang: C#
 ---
 Hey Folks,

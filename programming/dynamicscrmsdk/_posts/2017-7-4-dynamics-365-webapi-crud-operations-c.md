@@ -4,7 +4,9 @@ title: Dynamics 365 – WebAPI CRUD Operations (C#)
 date: 2017-7-4 15:29:28 - 0600
 PostDate: 2017-7-4
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/dynamics-365-webapi-crud-operations-c
 lang: C#
 ---
 I've added this post to showcase the CRUD operations in C# through WebAPI endpoint. You must have working experience in below areas: –

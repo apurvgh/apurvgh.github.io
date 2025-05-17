@@ -4,11 +4,10 @@ title:  "Develop your docs site with docfx"
 date:   2020-12-21 20:04:00 -0600
 PostDate: 2020-12-21
 author: apurvghai
-ag_categories: AzureDevOps
+category: azuredevops
+category_title: Azure DevOps
 lang: Yaml, Powershell
 ---
-
-**Season Greetings :)**
 
 Do you know about DocFx? No? You can [read more](https://dotnet.github.io/docfx/?_blank). You can do a lot more with DocFx. I am covering a scenario when you want to build websites with your favorite languages like using `Yaml`or `Markdown`. You can then host your site on either GitHub Pages, or choose a hosting provider.
 
@@ -42,42 +41,42 @@ Now that you are all set with your power tools, let us begin and do some fun stu
        {
         "build": {
             "content": [
-            {
-                "files": [
-                "*.{md,yml}",
-                "**/*.{md,yml}"
-                ]
-            }
+                {
+                    "files": [
+                        "*.{md,yml}",
+                        "**/*.{md,yml}"
+                    ]
+                }
             ],
             "resource": [
-            {
-                "files": [
-                ".attachments/**",
-                "images/**.{ico,png}",
-                "*.{ico,png}",
-                "scripts/**.{js}",
-                "web.config"
-                ]
-            }
+                {
+                    "files": [
+                        ".attachments/**",
+                        "images/**.{ico,png}",
+                        "*.{ico,png}",
+                        "scripts/**.{js}",
+                        "web.config"
+                    ]
+                }
             ],
             "globalMetadata": {
-            "_appTitle": "apurvghai.com",
-            "_appLogoPath": "images/logo.png",
-            "_appFaviconPath": "favicon.ico",
-            "_enableSearch": true,
-            "_enableNewTab": true,
-            "_gitContribute": {
-                "repo": "https://github.com/apurvghai/samplerepo",
-                "branch": "master"
-            },
-            "_appFooter": "© apurvghai.com  Built using DocFx"
+                "_appTitle": "apurvghai.com",
+                "_appLogoPath": "images/logo.png",
+                "_appFaviconPath": "favicon.ico",
+                "_enableSearch": true,
+                "_enableNewTab": true,
+                "_gitContribute": {
+                    "repo": "https://github.com/apurvghai/samplerepo",
+                    "branch": "master"
+                },
+                "_appFooter": "© apurvghai.com  Built using DocFx"
             },
             "template": [
-            "default",
-            "templates/material"
+                "default",
+                "templates/material"
             ],
             "postProcessors": [
-            "ExtractSearchIndex"
+                "ExtractSearchIndex"
             ],
             "force": true,
             "dest": "docs",
@@ -86,7 +85,7 @@ Now that you are all set with your power tools, let us begin and do some fun stu
             "markdownEngineName": "markdig",
             "noLangKeyword": false
         }
-        }
+    }
      ```   
     
     If you want to know more about each option inside this configuration, go [here](https://dotnet.github.io/docfx/tutorial/docfx.exe_user_manual.html).

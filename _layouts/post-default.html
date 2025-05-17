@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% include metatags.html %}
     {% include theme.html %}
     {% include googleanalytics.html %}
+    {% include jsondata.html %}
+  
     <!-- Custom styles for this template -->
-    <link href="/css/landing-custom.css" rel="stylesheet">
-<link href="/css/blog-post.css" rel="stylesheet">
+
+    <title>{{ site.title }}</title>
+
+
 </head>
-   
+
 <body>
-    <!-- Navigation -->
-    {% include navigation.html %}
-    
-    <!-- Page  -->
-    <div class="container">
-         <!-- Header -->
-        <div class="row head-banner">
-            <div class="col-lg-12">
-                <h3>{{ page.title }} </h3>  
-            </div>
-        </div>
-        <div class="row">
-            
-            <!-- Post Content Column -->
-            <div class="col-lg-8">
-                {% if page.author == "apurvghai"  %}
-                <!-- Author information -->
-                <p class="lead">
-                    {{ page.PostDate }} <b></b>|<b></b>  {{ page.author }} <b></b> | {{ page.ag_categories}} | <b></b> {{page.lang}}
-                    {% include jsondata.html %}
-                    {% endif  %}
-                </p>
-                <hr>
 
-                <!-- Post Content -->
-                {{ content }}
-                <hr>
+    <!-- Top Navbar -->
+    {% include top.html %}
 
-            </div>
+    <div>
+        <!-- Content Section: Posts + Categories Side by Side -->
+        <section class="content-section flex-wrap" style="margin-bottom: 65px;" title="{{ page.title }}">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="section-title post-title">{{ page.title }}</h4>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="h-100 flex-md-row">
 
-            <!-- Sidebar Widgets Column -->
-            <div class="col-lg-4">
-                   <h5 class="card-title"><strong>Recent Posts</strong></h5>
-                    <div class="card-body">
-                        <span class="card-text">
-                            {% assign currentPageCategory = page.ag_categories %}
-                            {% for post in site.posts limit: 10%}
-                            {% for category_name in post.ag_categories %}
-                            {% if category_name == currentPageCategory %}
-                            <div class="post-title">
-                                <a href="{{ post.url }}">{{ post.title }} </a><br>
-                                {{ post.PostDate | date: "%b %d, %y" }} | <i class="ag_categories">{{ post.ag_categories}} </i>
+                                    <div class="card-body">
+
+                                        <p class="ag_categories post-date">
+                                            {{ page.date | date: "%B %d, %Y" }}
+                                            · {{ page.category_title }} ·
+                                            {% assign words = page.content | number_of_words %}
+                                            {{ words | divided_by:200 | ceil }} min read 
+
+                                            {% if page.author == "apurvghai" %}
+                                            <!-- Author information -->
+                                            · </b> {{ page.author }} <b></b> · {{ page.lang }}
+                                            
+                                            {% endif %}
+
+
+                                        </p>
+                                        <span class="post-content">
+                                            {% if page.ag_original_link and page.ag_original_link != "" %}
+                                            {{ page.excerpt | strip_html | truncate: 550 }}
+
+                                            <p class="ag_categories post-date" style="margin-top: 20px"> This article
+                                                was originally published on
+                                                Microsoft Learn (foremerly known as <strong>Microsoft MSDN</strong>) <a
+                                                    href="{{ page.ag_original_link }}" target="_blank"
+                                                    rel="noopener">Read</a> the original article here.
+
+                                            </p>
+
+
+                                            {% else %}
+                                            {{ content }}
+                                            {% endif %}
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                            {% endif %}
-                            {% endfor %}
-                            {% endfor %}
-                        </span>
+                            <div class="row g-4">
+                                {% include disqus.html %}
+                            </div>
+                        </div>
                     </div>
+
+
+
+                    <!-- Categories -->
+                    <div class="col-md-4">
+                        {% include recent-posts.html %}
+                    </div>
+
+                </div>
             </div>
 
-        </div>
-        <!-- /.row -->
-        <!-- disqus -->
-        {% if page.author == "apurvghai"  %}
-        {% include disqus.html %}
-        {% endif  %}
+        </section>
     </div>
-    <!-- /.container -->
+
+
+    <!-- Footer -->
     <!-- Footer -->
     {% include footer.html %}
-
     <!-- Bootstrap core JavaScript -->
     {% include scripts.html %}
 
 </body>
-   
-   </html>
+
+</html>

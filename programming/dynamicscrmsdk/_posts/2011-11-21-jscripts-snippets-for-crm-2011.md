@@ -4,7 +4,9 @@ title: Jscripts snippets for CRM 2011
 date: 2011-11-21 19:9:0 - 0600
 PostDate: 2011-11-21
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/jscripts-snippets-for-crm-2011
 lang: C#
 ---
 <div class="blogSite">

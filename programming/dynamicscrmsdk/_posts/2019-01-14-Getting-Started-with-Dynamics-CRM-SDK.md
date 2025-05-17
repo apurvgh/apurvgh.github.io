@@ -4,7 +4,8 @@ title:  Getting started with Dynamics 365 CRM SDK in C#
 date:   2019-01-14 11:00:00 -0600
 PostDate: 2019-01-14
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
 lang: C#
 ---
 

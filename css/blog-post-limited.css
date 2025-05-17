@@ -1,0 +1,95 @@
+.section-title {
+    margin-bottom: 10px;
+}
+
+.post-title {
+    text-align: left !important;
+    font-size: 1rem !important;
+}
+
+.post-subtitle {
+    text-align: left !important;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.ag_categories {
+    color: #df4f33;
+    font-size: 0.85em !important;
+    font-weight: 400;
+}
+
+.ag_post_date {
+    color: #9f9c98;
+    font-size: 0.85em;
+    font-weight: 400;
+}
+
+.ag_nav-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+
+}
+
+#disqus_thread {
+    width: 100% !important;
+    /* Take full width */
+    max-width: 87% !important;
+}
+
+
+
+.image-attribution {
+    position: absolute !important;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.7em;
+    color: white !important;
+    padding: 2px 4px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/* Target the small tag wrapping the link */
+.image-attribution img {
+    display: inline-block;
+    /* Or display: block; depending on your layout */
+    color: white !important;
+}
+
+.image-attribution a,
+.image-attribution a:link,
+.image-attribution a:visited {
+    color: inherit !important;
+    text-decoration: underline;
+}
+
+.post-content {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    font-family: 'Arial', sans-serif !important;
+}
+
+.post-content pre,
+.post-content code {
+    background-color: #2567a8;
+    color: white;
+    padding: 5px;
+    font-size: .75rem;
+}
+
+.post-content code {
+    background-color: #2567a8;
+    color: white;
+    padding: 2px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}

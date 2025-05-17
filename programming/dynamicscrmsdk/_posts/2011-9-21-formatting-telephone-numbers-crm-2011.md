@@ -4,7 +4,9 @@ title: Formatting Telephone Numbers (CRM 2011)
 date: 2011-9-21 12:48:0 - 0600
 PostDate: 2011-9-21
 author: apurvghai
-ag_categories: Dynamics CRM SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
+ag_original_link: https://learn.microsoft.com/en-us/archive/blogs/apurvghai/formatting-telephone-numbers-crm-2011
 lang: C#
 ---
 <div class="blogSite">

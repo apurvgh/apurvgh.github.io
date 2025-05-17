@@ -1,7 +1,8 @@
 ---
-layout: post
-title: Dynamics 365 SDK
-ag_postCategory: dynamicscrmsdk
+layout: page
+title: Category - Dynamics 365 SDK
+category: dynamicscrmsdk
+category_title: Dataverse SDK
 ---
 
-{% include recent-posts.html %}
+{% include all-category-posts.html %}
