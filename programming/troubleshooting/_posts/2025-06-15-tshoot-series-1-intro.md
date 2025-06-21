@@ -6,7 +6,7 @@ PostDate: 2025-06-15
 author: apurvghai
 category: troubleshooting
 category_title: Troubleshooting Series
-lang: C#
+lang: English
 ---
 
 Hello! I'm Apurv, and I really enjoy solving problems—big or small.
