@@ -1,12 +1,12 @@
 ---
 layout: post-default
-title: Troubleshooting - Go Far by Going Deep
+title: 🔧 Troubleshooting - Go Far by Going Deep
 date: 2025-06-15 20:30:00 +0000
 PostDate: 2025-06-15
 author: apurvghai
 category: troubleshooting
 category_title: Troubleshooting Series
-lang: C#
+lang: English
 ---
 
 Troubleshooting isn’t just about fixing things. It’s about understanding the problem at hand.
