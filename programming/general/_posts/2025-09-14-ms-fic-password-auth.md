@@ -83,7 +83,7 @@ This entire process happens seamlessly behind the scenes, without your applicati
 
     AppService->>UAMI: Uses DefaultAzureCredential
 
-    Note over AppService: UAMI must be assigned to App Service <br> App Service must have Entra ID Authentication Configured as Microsoft Identity Provider
+    Note over AppService: UAMI must be assigned to App Service <br> For property security, Configure App Service with Entra ID Authentication with Microsoft Identity Provider.
 
     UAMI->>AAD: Requests access token for AppReg (as client assertion)
     AAD-->>UAMI: Issues access token for AppReg
@@ -122,7 +122,7 @@ Here's a simple C# code snippet that shows how easy it is to authenticate to Azu
     // The scope of the token you want to acquire (e.g., for Microsoft Graph).
     string[] scopes =
     {
-        "https://graph.microsoft.com/.default"
+        "https://graph.microsoft.com/.default" //YOUR_KEY_VAULT_URI
     };
     // 1. Explicitly create the ManagedIdentityId object for the user-assigned identity.
     ManagedIdentityId managedIdentityId = ManagedIdentityId.WithUserAssignedClientId(managedIdentityClientId);
