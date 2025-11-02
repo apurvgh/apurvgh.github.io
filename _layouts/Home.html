@@ -5,13 +5,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ site.title }}</title>
+  <title>{{ site.title }} - {{ site.description }}</title>
 
   {% include metatags.html %}
   {% include theme.html %}
   {% include googleanalytics.html %}
   {% include jsondata.html %}
-  
+
 
 </head>
 
@@ -27,39 +27,42 @@
     <div class="container">
       <div class="row g-4">
         <!-- Latest Posts -->
-        <div class="col-md-8">
-          <h4 class="section-title">Recent Posts</h4>
-          <div class="row g-4">
+        <div class="col-md-12">
+          <div class="text-center mt-4">
 
-
-            {% for post in site.posts limit:5 %}
-
-            <div class="col-12">
-              <div class="card h-100 flex-md-row">
-
-                <div class="card-body">
-                  <h5 class="card-title post-title">{{ post.title }}</h5>
-                  <p class="card-text ag_categories ag_postDate">{{ post.date | date: "%B %d, %Y" }} · {{ post.category_title }}</p>
-                  <p class="card-text post-subtitle">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-                  <a href="{{ post.url }}" class="btn btn-outline-primary btn-sm" data-toggle="tooltip"
-                    data-placement="top" title="Read more about {{ post.title }}">Read more</a>
-                </div>
-              </div>
+            <div class="alert alert-light" role="alert">
+              <p><strong>Apurv’s Sandbox</strong> is where curiosity meets code. I write about troubleshooting tricky
+                tech, experimenting
+                across stacks, and exploring APIs that don’t always behave. If you’ve ever hit a bug no one else blogged
+                about—or just love learning through real-world fixes and experiments—this newsletter’s for you. </p>
+              <p>
+                Real fixes. Real experiments. No fluff. Subscribe and get smarter with every post.
+              </p>
+              <p style="padding-top: 10px;">
+                <a href="{{ site.substack_url }}" class="btn btn-outline-dark">Read New Posts on Substack →</a>
+                |
+                <a href="{{ site.substack_subscribe_url }}"
+                  class="btn btn-substack">Subscribe</a>
+              </p>
             </div>
-
-            {% endfor %}
           </div>
-        </div>
 
-        <!-- Categories -->
-        <div class="col-md-4">
-          {% include categories.html %}
+          <h4 class="section-title">Archive</h4>
+          <div class="row g-4">
+            <p class="text-center text-muted">Older posts from this domain. New posts are on Substack.</p>
+            <ul class="list-group list-group-flush shadow-sm bg-white rounded">
+              {% for post in site.posts limit:10 %}
+              <li class="list-group-item">✨ <a href="{{ post.url }}" data-toggle="tooltip" data-placement="top"
+                  title="Read more about {{ post.title }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Footer -->
- 
+
   {% include scripts.html %}
   <!-- Footer -->
   {% include footer.html %}

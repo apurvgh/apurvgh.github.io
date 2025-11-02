@@ -1,7 +1,7 @@
 <!-- Top Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Apurv's Blog</a>
+    <a class="navbar-brand fw-bold" href="/">{{ site.title }}</a>
     <form class="d-flex ms-auto me-3" role="search">
       {% include google-search.html %}
     </form>
@@ -11,33 +11,26 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item ag_nav-text"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item ag_nav-text"><a class="nav-link" href="/programming.html">All ({{ site.posts.size }})</a></li>
-
-        <li class="nav-item ag_nav-text dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Tech Stack</a>
-          
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-            {% assign categories = site.posts | map: "category" | uniq %}
-            {% for cat in categories %}
-            {% assign cat_count = 0 %}
-            {% for post in site.posts %}
-            {% if post.category == cat %}
-            {% assign cat_count = cat_count | plus: 1 %}
-            {% assign cat_title = post.category_title %}
-            {% endif %}
-            {% endfor %}
-            <a class="dropdown-item ag_nav-text" href="/programming/{{ cat }}">{{ cat_title }} ({{ cat_count }})</a>
-            {% endfor %}
-
-          </div>
-        </li>
-        <li class="nav-item ag_nav-text"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item ag_nav-text-new"><a class="nav-link" href="{{ site.substack_url }}" target="_blank" rel="noopener"
+            data-toggle="tooltip" data-placement="bottom" title="Apurv's Sandbox on Substack">Blogs</a></li>
+        <li class="nav-item ag_nav-text"><a class="nav-link" href="/programming.html">Archive ({{ site.posts.size
+            }})</a></li>
+        <li class="nav-item ag_nav-text"><a class="nav-link" target="_blank" rel="noopener"
+            href="{{ site.substack_url }}/p/about">About</a></li>
 
         <li class="nav-item d-flex align-items-center ms-2">
-          <a href="https://x.com/apurvghai" class="nav-link px-2" target="_blank"><i class="bi bi-twitter"></i></a>
-          <a href="https://github.com/apurvgh/apurvgh.github.io" class="nav-link px-2" target="_blank"><i class="bi bi-github"></i></a>
-          <a href="/feed.xml" class="nav-link px-2"><i class="bi bi-rss" target="_blank"></i></a>
+          <a href="https://x.com/apurvghai" class="nav-link px-2" data-toggle="tooltip" data-placement="bottom"
+            title="@apurvghai on X" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          
+            <a href="https://www.linkedin.com/in/apurvghai/" class="nav-link px-2" data-toggle="tooltip" data-placement="bottom"
+            title="View My Profile @ LinkedIn" rel="noopener" target="_blank"><i class="bi bi-linkedin"></i></a>
+
+          <a href="https://github.com/apurvghai" target="_blank" rel="noopener" class="nav-link px-2" target="_blank"
+            data-toggle="tooltip" data-placement="bottom" title="View my contributions on github"><i
+              class="bi bi-github"></i></a>
+
+          <a href="/feed.xml" rel="noopener" class="nav-link px-2" data-toggle="tooltip" data-placement="bottom"
+            title="RSS Feed"><i class="bi bi-rss" target="_blank"></i></a>
         </li>
       </ul>
     </div>
