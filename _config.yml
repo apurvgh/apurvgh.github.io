@@ -13,18 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Apurv's Blog - Blogs on Troubleshtooting, Tips/Tricks, and Technology
+title: Apurv Ghai
 email: 
-description: You will find blogs about different technologies. I usually share tips on various things I have worked on like Dynamics CRM SDK, Graph API, Exchange APIs.
+description: Hello, I’m Apurv —  a tech enthusiast who loves sharing practical insights. Real fixes. Real experiments. No fluff. Subscribe to Apurv’s Sandbox and get smarter with every post.
   #Write an awesome description for your new site here. You can edit this
   #line in _config.yml. It will appear in your document head meta (for
   #Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://apurvghai.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: apurvgh
-github_username:  apurvgh
+github_username:  apurvghai
 author_first_name: Apurv
 author_last_name: Ghai
+substack_url: https://blogs.apurvghai.com
+substack_subscribe_url: https://blogs.apurvghai.com/subscribe?utm_source=subscribe_content_block&simple=true&next=https%3A%2F%2Fblogs.apurvghai.com%2F
 sass:
   style: :compressed
 theme: jekyll-theme-primer
