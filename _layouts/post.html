@@ -10,40 +10,79 @@
     {% include theme.html %}
     {% include googleanalytics.html %}
     {% include jsondata.html %}
-  
+
     <!-- Custom styles for this template -->
 
     <title>{{ site.title }}</title>
     <link href="/css/blog-post-limited.css" rel="stylesheet">
+    <link href="/css/home.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Top Navbar -->
-    {% include top.html %}
+    {% include top-page.html %}
 
     <!-- Content Section: Posts + Categories Side by Side -->
     <!-- Content Section: Posts + Categories Side by Side -->
 
-    <section class="content-section flex-wrap" style="margin-bottom: 65px;" title="All Posts">
+    <section class="content-section flex-wrap" style="margin-top: 95px;" title="All Posts">
         <div class="container">
             <div class="row g-4">
                 <!-- Latest Posts -->
                 <div class="col-md-12">
                     <h4 class="section-title">All Posts</h4>
+                    <p class="section-subtitle">
+                    <div class="container">
+                        <div class="row mb-4">
+                            <div class="col-lg-8">
+                                <h4 class="section-page-title">Earlier Work: Microsoft Learn Archive</h4>
+                                <p class="section-subtitle">
+                                    Deep technical insights from my years working on Dynamics 365 and Power Platform at
+                                    Microsoft. These archived posts on Microsoft Learn cover debugging patterns,
+                                    platform features, and real-world troubleshooting.
+                                </p>
+                            </div>
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="https://learn.microsoft.com/en-us/archive/blogs/apurvghai/"
+                                    class="substack-cta" target="_blank" rel="noopener noreferrer"
+                                    aria-label="View Microsoft Learn Archive">
+                                    <i class="fa-solid fa-book"></i>
+                                    Visit Microsoft Learn
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    </p>
+
+
                     <div class="row g-4">
                         {% for post in site.posts %}
+                        {% if post.ag_original_link and post.ag_original_link contains 'learn.microsoft.com' %}
+                            {% assign post_generated_url = post.ag_original_link %}
+                        {% else %}
+                            {% assign post_generated_url = post.url %}
+                        {% endif %}
                         <div class="col-12">
                             <div class="card h-100 flex-md-row">
 
                                 <div class="card-body">
-                                    <h5 class="card-title post-title">{{ post.title }}</h5>
-                                    <p class="card-text text-muted">{{ post.date | date: "%B %d, %Y" }} · {{
-                                        post.category }}</p>
+                                    <h5 class="card-title post-title">{{ post.title }}
+                                        {% if post.ag_original_link and post.ag_original_link contains
+                                        'learn.microsoft.com' %}
+                                        <span class="badge bg-primary"
+                                            style="font-size: 0.65rem; white-space: nowrap;">Microsoft Learn</span>
+                                        {% endif %}
+                                    </h5>
+                                    <p class="card-text ag_categories post-date">{{ post.date | date: "%B %d, %Y" }} ·
+                                        {{
+                                        post.category_title }}</p>
                                     <p class="card-text post-subtitle">{{ post.excerpt | strip_html | truncate: 250 }}
                                     </p>
-                                    <a href="{{ post.url }}" class="btn btn-outline-primary btn-sm"
-                                        data-toggle="tooltip" data-placement="top"
+                                    <a href="{{ post_generated_url }}" class="btn btn-outline-primary btn-sm"
+                                        data-toggle="tooltip" data-placement="top" target="_blank"
                                         title="Read more about {{ post.title }}">Read more</a>
                                 </div>
                             </div>
