@@ -3,116 +3,133 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }} - {{ site.description }}</title>
 
-  {% include metatags.html %}
-  {% include theme.html %}
-  {% include googleanalytics.html %}
-  {% include jsondata.html %}
+    {% include metatags.html %}
+    {% include theme.html %}
+    {% include googleanalytics.html %}
+    {% include jsondata.html %}
 
-  <link href="/css/home.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="/css/home.css" rel="stylesheet" />
 
+
+  <style>
+    
+  </style>
 </head>
 
 <body>
 
-  <!-- Top Navbar -->
   {% include top.html %}
-
-
-
-
-  <!-- Experience Section -->
-  <section id="experience">
-    {% include experience.html %}
-
-  </section>
-
-  <!-- Archived Articles Section -->
-  <section id="articles">
+  <section class="py-5">
     <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-8">
-          <h2 class="section-title">The Deep Dives</h2>
-          <p class="section-subtitle">
-            Real post-mortems from production fires, experiments I've run on frameworks and APIs, and the patterns I use
-            to recommend technologies. These are the insights that come from shipping at
-            scale and learning what actually works. For the latest posts and deeper analysis, <a href="{{ site.substack_url }}" target="_blank" rel="noopener noreferrer" class="subscribe-link">subscribe on Substack</a>.
-          </p>
-        </div>
-        <div class="col-lg-4 text-lg-end">
-          <div class="d-flex flex-column flex-lg-row gap-2 justify-content-lg-end">
-            <a href="/programming" class="substack-cta" target="_blank" rel="noopener noreferrer"
-              aria-label="View full archive">
-              <i class="fa-solid fa-archive"></i>
-              Other ({{ site.posts.size }}) Posts
-            
-            </a>
-            <a href="{{ site.substack_url }}" class="substack-cta" target="_blank" rel="noopener noreferrer"
-              aria-label="Subscribe on Substack">
-              <i class="fa-solid fa-paper-plane"></i>
-              Subscribe on Substack
-            </a>
+      <h2 class="section-label mb-5">The Digital Detective Methodology</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="glass-card">
+            <div class="text-primary mb-3 fw-bold">01. OBSERVE</div>
+            <h5>Empathetic Isolation</h5>
+            <p class="small text-secondary">Understanding business friction and human impact before the keyboard.
+              Troubleshooting begins with empathy.</p>
           </div>
         </div>
-      </div>
-
-      <div class="row g-3">
-        {% for post in site.posts limit:5 %}
-        <div class="col-md-6 col-lg-4">
-          <article class="article-card">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h3 class="article-title">
-                {{ post.title }}
-              </h3>
-              
-            </div>
-            <div class="article-meta">
-              &middot; {{ post.date | date: "%B %d, %Y" }}
-            </div>
-            <p class="article-description">
-              {{ post.excerpt | strip_html | truncate: 50 }}
-            </p>
-
-            <div class="article-tags">
-              {% for category in post.category_title %}
-              <span>{{ category }}</span>
-              {% endfor %}
-            </div>
-
-            <a href="{{ post.url }}" class="article-read-more">
-              Read more <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-          </article>
+        <div class="col-md-4">
+          <div class="glass-card">
+            <div class="text-primary mb-3 fw-bold">02. REASON</div>
+            <h5>Diagnostic Reasoning</h5>
+            <p class="small text-secondary">Leveraging AI to reason over telemetry and logs. Turning natural language
+              into deep-dive technical diagnostics.</p>
+          </div>
         </div>
-        {% endfor %}
-      </div>
-
-      <!-- Microsoft Learn Archive Row -->
-      <div class="row g-3" style="margin-top: 2rem;">
-        <div class="col-12">
-          <div class="experience-card ms-learn-card">
-            <p class="ms-learn-icon">📚</p>
-            <h4 class="ms-learn-title">Earlier Work: Microsoft Learn Archive</h4>
-            <p class="ms-learn-description">
-              Deep technical insights from my years working on Dynamics 365 and Power Platform. These archived posts cover debugging patterns, platform features, and real-world troubleshooting that shaped my approach to building observable systems.
-            </p>
-            <a href="https://learn.microsoft.com/en-us/archive/blogs/apurvghai/" class="substack-cta" target="_blank" rel="noopener noreferrer"
-              aria-label="View Microsoft Learn Archive">
-              <i class="fa-solid fa-book"></i>
-              Visit Microsoft Learn
-            </a>
+        <div class="col-md-4">
+          <div class="glass-card">
+            <div class="text-primary mb-3 fw-bold">03. RESOLVE</div>
+            <h5>Generative Solutions</h5>
+            <p class="small text-secondary">Transforming findings into self-healing code. Using generative AI to turn
+              diagnostic logic into execution.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="container">
+    <div class="section-breaker"></div>
+  </div>
+
+  <section id="sandbox" class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <h2 class="section-label mb-3">Apurv's Sandbox</h2>
+          <p class="lead text-secondary mt-3">Where curiosity meets code. I write about troubleshooting tricky tech,
+            experimenting across stacks, and exploring APIs that don’t always behave. If you’ve ever hit a bug no one
+            else blogged about—this newsletter’s for you.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        {% for post in site.posts limit:3 %}
+        <div class="col-md-4">
+          <div class="glass-card">
+            {% for category in post.category_title %}
+            <span class="text-primary small fw-bold">{{ category }}</span>
+            {% endfor %}
+
+            <h4 class="mt-2 h5"> {{ post.title }}</h4>
+            <p class="text-secondary small">{{ post.excerpt | strip_html | truncate: 35 }}</p>
+            <a href="{{ post.url }}" class="text-white text-decoration-none small fw-bold">READ &rarr;</a>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="section-breaker"></div>
+  </div>
+
+  <section id="archive" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <h2 class="fw-bold mb-3">Microsoft Learn Archive</h2>
+          <p class="text-secondary mb-4">Deep technical insights from my years working on Dynamics 365 and Power
+            Platform. These posts cover debugging patterns that shaped my approach to observable systems. <strong><a
+                href="https://learn.microsoft.com/en-us/archive/blogs/apurvghai/" target="_blank"
+                class="text-primary text-decoration-none">View Full Archive &nearrow;</a></strong></p>
+        </div>
+        <div class="col-lg-7 ps-lg-5">
+          <div class="archive-list">
+            {% assign filtered_posts = site.posts
+            | where_exp: "post", "post.ag_original_link contains 'learn.microsoft.com'" %}
+
+            {% for post in filtered_posts limit:4 %}
+            <div class="archive-item">
+              {% for category in post.category_title %}<span class="badge badge-legacy mb-2">{{ category }}</span>
+              {% endfor %}
+              <h5 class="h6 mb-0"> {{ post.title }}</h5>
+            </div>
+            {% endfor %}
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscribe" class="py-5">
+    <div class="container text-center">
+      {% include substack.html %}
+    </div>
+  </section>
   {% include scripts.html %}
-  <!-- Footer -->
+
   {% include footer.html %}
 </body>
 

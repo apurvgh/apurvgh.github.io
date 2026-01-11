@@ -1,47 +1,15 @@
-<!-- Top Navbar -->
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark pt-4">
   <div class="container">
-    <a class="navbar-brand" href="#home">Apurv&nbsp;Ghai</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <span class="text-secondary">·</span>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
-        </li>
-        <span class="text-secondary">·</span>
-        <li class="nav-item">
-          <a class="nav-link" href="#articles"> Deep Dives </a>
-        </li>
-        <span class="text-secondary">·</span>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.substack_url }}" target="_blank" rel="noopener" data-toggle="tooltip"
-            data-placement="bottom" title="Apurv's Sandbox on Substack"> Blogs </a>
-        </li>
-
-        <li class="nav-item ms-3">
-          <a class="nav-link p-0" href="https://x.com/apurvghai" data-toggle="tooltip" data-placement="bottom"
-            title="View My Profile @ LinkedIn" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        </li>
-        <li class="nav-item ps-2 pe-2">
-          <a class="nav-link p-0" href="https://www.linkedin.com/in/apurvghai/" data-toggle="tooltip"
-            data-placement="bottom" title="View My Profile @ LinkedIn" rel="noopener" target="_blank"><i
-              class="bi bi-linkedin"></i></a>
-        </li>
-        <li class="nav-item p-0">
-          <a class="nav-link p-0" href="https://github.com/apurvgh" data-toggle="tooltip" data-placement="bottom"
-            title="View My Profile @ GitHub" rel="noopener" target="_blank"><i class="bi bi-github"></i></a>
-        </li>
-      </ul>
+    <a class="navbar-brand fw-bold" href="#">APURV GHAI</a>
+    <div class="ms-auto d-flex align-items-center">
+      <a href="/" class="text-white text-decoration-none me-4 small">Home</a>
+      {% if page.url == "/" %}
+        <a href="/#sandbox" class="text-white text-decoration-none me-4 small">Blogs</a>
+      {% else %}
+        <a href="https://blogs.apurvghai.com" class="text-white text-decoration-none me-4 small">Blogs</a>
+      {% endif %}
+      <a href="/#archive" class="text-white text-decoration-none me-4 small">Archive</a>
+      <a href="{{ site.substack_subscribe_url }}" class="btn btn-ms btn-sm">Join Substack</a>
     </div>
   </div>
 </nav>

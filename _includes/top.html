@@ -1,92 +1,17 @@
 <!-- Top Navbar -->
 {% include navigation.html %}
 
-<!-- Home / Hero -->
-<section id="home">
-  <div class="container">
-    <div class="row align-items-center gy-4">
-      <div class="col-lg-7">
-        <div class="hero-intro">
-          <p class="hero-tagline">👋 Welcome</p>
-          <h1 class="hero-title">
-            I learn by breaking systems. I grow by fixing them. Then I share what I've learned.
-          </h1>
-
-          <p class="hero-subtitle mb-3">
-            This is where curiosity meets code. I've spent 20+ years hunting down root causes in production
-            systems—distributed failures, mysterious performance cliffs, silent data corruption and more. Now I'm
-            writing the insights I wish existed when I started debugging. But this isn't just about sharing what I
-            know—it's about learning together. I'm passionate about giving back to the ecosystem that shaped me,
-            teaching others to think like debuggers, and building a community where we collectively solve harder
-            problems faster.</p>
-
-          <!-- Big Substack banner -->
-          <div class="substack-banner">
-            <span class="substack-banner-label">
-              📧 Real Fixes · Real Experiments · Real Insights
-            </span>
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start gap-3">
-              <div>
-                <div class="substack-banner-title">
-                  Subscribe to Apurv's Sandbox.
-                </div>
-                <p class="substack-banner-text mb-0">
-                  <strong>Real fixes from real incidents.</strong> Real experiments with APIs and technologies that
-                  don't always behave as promised. Real patterns for building observable, resilient systems at
-                  enterprise
-                  scale. <br /><br />
-                  Real fixes. Real experiments. No fluff. Subscribe and get smarter with every post.
-                </p>
-              </div>
-              <div class="text-lg-end">
-                <a href="{{ site.substack_url }}" class="btn-substack" target="_blank" rel="noopener noreferrer">
-                  <i class="fa-solid fa-paper-plane"></i>
-                  Subscribe Now
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Optional side panel for "at a glance" info -->
-      <div class="col-lg-5">
-        <div class="experience-card">
-          <p class="glance-label">🎯 What You'll Learn</p>
-          <div class="glance-content">
-
-            <p><strong>🔍 Troubleshooting Patterns</strong> - How to systematically hunt down root causes in
-              production systems, from infrastructure to application layers.</p>
-
-            <p><strong>⚡ Real Incident Breakdowns</strong> - Post-mortems from actual critical failures: what went
-              wrong, how we found it, what changed as a result.</p>
-
-            <p><strong>🧪 API & Framework Experiments</strong> - How different technologies behave in edge cases,
-              performance characteristics, and the gotchas nobody warns you about.</p>
-
-            <p><strong>📊 Observability & Telemetry</strong> - Building systems you can actually debug:
-              instrumentation strategies, what metrics matter, and when alerts save you.</p>
-          </div>
-          <div class="d-flex flex-wrap gap-2 mt-4">
-            <span class="experience-chip">
-              <i class="fa-solid fa-bug-slash"></i> Systems Debugging
-            </span>
-            <span class="experience-chip">
-              <i class="fa-solid fa-code-branch"></i> Production Patterns
-            </span>
-            <span class="experience-chip">
-              <i class="fa-solid fa-flask"></i> Real Experiments
-            </span>
-            <span class="experience-chip">
-              <i class="fa-solid fa-chart-line"></i> Observable Systems
-            </span>
-          </div>
-        </div>
+  <header class="hero-section">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">Logic First.<br><span class="text-gradient">Code Second.</span></h1>
+      <p class="lead text-secondary mb-4 hero-lead">I learn by breaking systems. I grow by fixing them. Then I share what I've learned. A two-decade journey from the deep archives of Microsoft troubleshooting to the frontier of <strong>Agentic AI</strong>. </p>
+      <div class="d-flex gap-3">
+        <a href="{{ site.substack_url }}" class="btn btn-ms">Visit the Sandbox</a>
+        <a href="#subscribe" class="btn btn-ms">Subscribe</a>
+        <a href="#archive" class="btn btn-outline-secondary btn-lg py-2 px-4 fs-6">Legacy Archive</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGP8ZTNV" height="0" width="0"
     style="display:none;visibility:hidden"></iframe></noscript>

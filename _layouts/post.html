@@ -21,7 +21,7 @@
 <body>
 
     <!-- Top Navbar -->
-    {% include top-page.html %}
+    {% include top.html %}
 
     <!-- Content Section: Posts + Categories Side by Side -->
     <!-- Content Section: Posts + Categories Side by Side -->
@@ -33,65 +33,63 @@
                 <div class="col-md-12">
                     <h4 class="section-title">All Posts</h4>
                     <p class="section-subtitle">
+
+
+
                     <div class="container">
-                        <div class="row mb-4">
-                            <div class="col-lg-8">
-                                <h4 class="section-page-title">Earlier Work: Microsoft Learn Archive</h4>
-                                <p class="section-subtitle">
-                                    Deep technical insights from my years working on Dynamics 365 and Power Platform at
-                                    Microsoft. These archived posts on Microsoft Learn cover debugging patterns,
-                                    platform features, and real-world troubleshooting.
-                                </p>
+
+                        <div class="row">
+                            <div class="col-lg-12 mb-4">
+                                <h2 class="fw-bold mb-3">Microsoft Learn Archive</h2>
+                                <p class="text-secondary mb-4">Deep technical insights from my years working on Dynamics
+                                    365 and Power
+                                    Platform. These posts cover debugging patterns that shaped my approach to observable
+                                    systems. <strong><a
+                                            href="https://learn.microsoft.com/en-us/archive/blogs/apurvghai/"
+                                            target="_blank" class="text-primary text-decoration-none">View Full Archive
+                                            &nearrow;</a></strong></p>
                             </div>
-                            <div class="col-lg-4 text-lg-end">
-                                <a href="https://learn.microsoft.com/en-us/archive/blogs/apurvghai/"
-                                    class="substack-cta" target="_blank" rel="noopener noreferrer"
-                                    aria-label="View Microsoft Learn Archive">
-                                    <i class="fa-solid fa-book"></i>
-                                    Visit Microsoft Learn
-                                </a>
-                            </div>
+
                         </div>
-
-
-                    </div>
-                    </p>
-
-
-                    <div class="row g-4">
-                        {% for post in site.posts %}
-                        {% if post.ag_original_link and post.ag_original_link contains 'learn.microsoft.com' %}
-                            {% assign post_generated_url = post.ag_original_link %}
-                        {% else %}
-                            {% assign post_generated_url = post.url %}
-                        {% endif %}
-                        <div class="col-12">
-                            <div class="card h-100 flex-md-row">
-
-                                <div class="card-body">
-                                    <h5 class="card-title post-title">{{ post.title }}
-                                        {% if post.ag_original_link and post.ag_original_link contains
-                                        'learn.microsoft.com' %}
-                                        <span class="badge bg-primary"
-                                            style="font-size: 0.65rem; white-space: nowrap;">Microsoft Learn</span>
-                                        {% endif %}
-                                    </h5>
-                                    <p class="card-text ag_categories post-date">{{ post.date | date: "%B %d, %Y" }} ·
-                                        {{
-                                        post.category_title }}</p>
-                                    <p class="card-text post-subtitle">{{ post.excerpt | strip_html | truncate: 250 }}
-                                    </p>
-                                    <a href="{{ post_generated_url }}" class="btn btn-outline-primary btn-sm"
-                                        data-toggle="tooltip" data-placement="top" target="_blank"
-                                        title="Read more about {{ post.title }}">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
                     </div>
                 </div>
+                </p>
 
+
+                <div class="row g-4">
+                    {% for post in site.posts %}
+                    {% if post.ag_original_link and post.ag_original_link contains 'learn.microsoft.com' %}
+                    {% assign post_generated_url = post.ag_original_link %}
+                    {% else %}
+                    {% assign post_generated_url = post.url %}
+                    {% endif %}
+                    <div class="col-12">
+
+                        <div class="glass-card">
+                            {% for category in post.category_title %}
+                            <span class="text-primary small fw-bold">{{ category }}</span>
+                            {% endfor %}
+
+                            <h4 class="mt-2 h5"> {{ post.title }} {% if post.ag_original_link and post.ag_original_link
+                                contains
+                                'learn.microsoft.com' %}
+                                <span class="badge bg-primary"
+                                    style="font-size: 0.65rem; white-space: nowrap;">Microsoft Learn</span>
+                                {% endif %}
+                            </h4>
+                            <p class="text-secondary small">{{ post.excerpt | strip_html | truncate: 550 }}</p>
+                            <a href="{{ post_generated_url }}"
+                                class="text-white text-decoration-none small fw-bold">READ
+                                &rarr;</a>
+                        </div>
+
+
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
+
+        </div>
         </div>
     </section>
     <!-- Footer -->
