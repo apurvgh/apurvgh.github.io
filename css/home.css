@@ -1,0 +1,251 @@
+:root {
+    /* Slate & Indigo Theme */
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --bg-card-hover: #334155;
+
+    --primary: #818cf8;
+    /* Indigo 400 */
+    --primary-hover: #6366f1;
+    /* Indigo 500 */
+
+    --secondary: #2dd4bf;
+    /* Teal 400 */
+
+    --text-main: #f8fafc;
+    /* Slate 50 */
+    --text-muted: #cbd5e1;
+    /* Slate 300 - Lightened from #94a3b8 for better contrast */
+
+    --border-color: #334155;
+
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Force Bootstrap text-muted utility to use our color */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+/* Typography Overrides */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-main);
+    letter-spacing: -0.025em;
+    /* Tighter tracking for headings */
+    font-weight: 700;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-link-custom {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover {
+    color: var(--primary);
+}
+
+/* Sections */
+.section-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Components */
+.hero-section {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+    /* Subtle glow effect */
+    background: radial-gradient(circle at 100% 0%, rgba(129, 140, 248, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(45, 212, 191, 0.1) 0%, transparent 50%);
+}
+
+.hero-lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    max-width: 700px;
+}
+
+/* Tech Card */
+.tech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.tech-card:hover::before {
+    opacity: 1;
+}
+
+.card-number {
+    font-family: 'JetBrains Mono', monospace;
+    /* Technical font for numbers if available, else fallback */
+    color: var(--primary);
+    /* Switched to primary for visibility */
+    filter: brightness(0.8);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tech-card:hover .card-number {
+    color: var(--primary);
+}
+
+/* Buttons */
+.btn-primary-tech {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-primary-tech:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
+}
+
+.btn-outline-tech {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    border-radius: 6px;
+    padding: 0.75rem 1.75rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn-outline-tech:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Archive Items */
+.archive-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.archive-item:hover {
+    transform: translateX(4px);
+    border-bottom-color: var(--primary);
+}
+
+.archive-item h5 {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+}
+
+.badge-tech {
+    background: rgba(129, 140, 248, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 0.25em 0.6em;
+    border-radius: 4px;
+    width: fit-content;
+    letter-spacing: 0.05em;
+}
+
+/* Utilities */
+.section-breaker {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 4rem 0;
+    opacity: 0.5;
+}
+
+/* Footer */
+.modern-footer {
+    border-top: 1px solid var(--border-color);
+    background: #0b1120;
+    /* Slightly darker than body */
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.social-icon {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-right: 1.5rem;
+}
+
+.social-icon:hover {
+    color: var(--bg-dark);
+    /* Should likely be secondary/primary, but sticking to design request or standard hover */
+    color: var(--secondary);
+    transform: translateY(-2px);
+}

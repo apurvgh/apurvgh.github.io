@@ -1,10 +1,120 @@
 .section-title {
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .post-title {
-    text-align: left !important;
-    font-size: 1rem !important;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.post-subtitle {
+    text-align: left;
+    padding: 5px 0;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.ag_categories {
+    color: var(--primary);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.ag_post_date {
+    color: var(--text-muted);
+    font-size: 0.85em;
+    font-weight: 400;
+}
+
+.image-attribution {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.7em;
+    color: var(--text-muted);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.image-attribution a {
+    color: var(--text-main);
+}
+
+.post-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-family: var(--font-main);
+    color: var(--text-muted);
+    /* Main text color for posts */
+}
+
+/* Headings within content */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content h2 {
+    font-size: 1.75rem;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+}
+
+/* Code Blocks */
+.post-content pre,
+.post-content code {
+    background-color: var(--bg-card);
+    /* Darker card bg for code */
+    color: #e2e8f0;
+    /* Light slate code text */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    border-radius: 6px;
+}
+
+.post-content pre {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.post-content code {
+    padding: 0.2em 0.4em;
+}
+
+.btn-substack {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    background-color: #ff6719;
+    /* Keeping substack orange brand color */
+    border: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-substack:hover {
+    background-color: #e65f17;
+    transform: translateY(-1px);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 103, 25, 0.3);
 }
 
 .post-subtitle {
@@ -76,16 +186,16 @@
 
 .post-content pre,
 .post-content code {
-    background-color: #fafafa;
-    color: #396a93;
+    background-color: #396a93;
+    color: #ffffff;
     padding: 5px;
     font-size: .75rem;
     overflow-wrap: break-word;
 }
 
 .post-content code {
-    background-color: #fafafa;
-    color: #396a93;
+    background-color: #396a93;
+    color: #ffffff;
     padding: 2px;
     overflow-wrap: break-word;
 }
@@ -101,9 +211,9 @@
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    font-weight: 550 !important;
+    font-weight: 650 !important;
     font-size: 1.1rem !important;
-    color: rgb(52, 48, 48) !important;
+    color: rgb(187 178 178) !important;
 }
 
 .btn-substack {
