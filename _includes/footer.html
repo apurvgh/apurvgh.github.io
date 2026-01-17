@@ -1,10 +1,44 @@
 <!-- Footer -->
+<footer class="modern-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-5">
+        <h4 class="fw-bold mb-4">APURV GHAI</h4>
+        <p class="small">Two decades of technical leadership and global-scale troubleshooting. Bridging legacy
+          complexity with generative intelligence.</p>
+        <div class="mt-4">
+          <a href="https://github.com/apurvgh" target="_blank" class="social-icon" rel="noopener" title="github"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/apurvghai" target="_blank" class="social-icon" rel="noopener"
+            title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://x.com/apurvghai" target="_blank" class="social-icon" rel="noopener" title="X"><i
+              class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 offset-lg-2 col-6 mb-4">
+        <h6 class="text-white fw-bold mb-3">Navigation</h6>
+        <a href="#" class="footer-link">Home</a>
+        <a href="#sandbox" class="footer-link">Sandbox</a>
 
-<footer class="footer mt-auto py-3 bg-light border-top fixed-bottom">
-  <div class="container d-flex justify-content-between align-items-center small">
-    <span class="text-muted">&copy; apurvghai.com {{ site.time | date: '%Y' }} | Built with ❤️ Hosted on GitHub Pages. </span>
-    <span>
-      <a href="/privacy.html" class="text-muted text-decoration-none me-3">Privacy</a>
-    </span>
+        <a href="{{ site.substack_url }}/p/about" class="footer-link">About</a>
+        <a href="/privacy" class="footer-link">Privacy</a>
+        <a href="#" id="open_preferences_center" class="footer-link">Cookies Preferences</a>
+
+      </div>
+      <div class="col-lg-2 col-6 mb-4">
+        <h6 class="text-white fw-bold mb-3">Resources</h6>
+        <a href="https://learn.microsoft.com" class="footer-link">MS Learn</a>
+        <a href="{{ site.substack_url }}" class="footer-link">Substack</a>
+        <a href="#archive" class="footer-link">Legacy Archive</a>
+      </div>
+    </div>
+    <div class="pt-5 mt-5 text-center section-breaker" style="margin-bottom: 0;">
+      <!-- Reusing section-breaker as a top border or just use standard border with opacity -->
+    </div>
+    <div class="text-center">
+      <p class="small text-muted">&copy; apurvghai.com <span id="year">{{ site.time | date: '%Y' }} <span
+            class="mx-2 text-secondary">·</span>
+        </span> Built with ❤️ Hosted on GitHub Pages.</p>
+    </div>
   </div>
 </footer>

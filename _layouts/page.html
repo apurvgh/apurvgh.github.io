@@ -7,23 +7,24 @@
     {% include theme.html %}
     {% include googleanalytics.html %}
     {% include jsondata.html %}
-   
+
     <!-- Custom styles for this template -->
 
     <title>{{ site.title }}</title>
     <link href="/css/blog-post-limited.css" rel="stylesheet">
+    <link href="/css/home.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Top Navbar -->
     {% include top.html %}
-    
+
 
     <!-- Content Section: Posts + Categories Side by Side -->
-      <!-- Content Section: Posts + Categories Side by Side -->
-  
-      <section class="content-section flex-wrap" style="margin-bottom: 65px;" title="Latest Posts">
+    <!-- Content Section: Posts + Categories Side by Side -->
+
+    <section class="content-section flex-wrap" style="margin-bottom: 65px;" title="Latest Posts">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-8">
@@ -34,7 +35,7 @@
 
                                 <div class="card-body">
 
-                                   
+
                                     <div class="post-content"> {{ content }}</div>
 
                                 </div>
@@ -53,7 +54,7 @@
     {% include footer.html %}
 
 
-   
+
 </body>
 
 </html>

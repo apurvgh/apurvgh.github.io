@@ -3,8 +3,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }} - {{ site.description }}</title>
 
   {% include metatags.html %}
@@ -12,61 +12,135 @@
   {% include googleanalytics.html %}
   {% include jsondata.html %}
 
+  <!-- Custom styles for this template -->
+  <link href="/css/home.css" rel="stylesheet" />
 
+
+  <style>
+
+  </style>
 </head>
 
 <body>
 
-  <!-- Top Navbar -->
   {% include top.html %}
-
-
-
-  <!-- Content Section: Posts + Categories Side by Side -->
-  <section class="content-section flex-wrap" style="margin-bottom: 65px;" title="Latest Posts">
+  <section class="py-5">
     <div class="container">
+      <h2 class="section-label mb-5">The Digital Detective Methodology</h2>
       <div class="row g-4">
-        <!-- Latest Posts -->
-        <div class="col-md-12">
-          <div class="text-center mt-4">
-
-            <div class="alert alert-light" role="alert">
-              <p><strong>Apurv’s Sandbox</strong> is where curiosity meets code. I write about troubleshooting tricky
-                tech, experimenting
-                across stacks, and exploring APIs that don’t always behave. If you’ve ever hit a bug no one else blogged
-                about—or just love learning through real-world fixes and experiments—this newsletter’s for you. </p>
-              <p>
-                Real fixes. Real experiments. No fluff. Subscribe and get smarter with every post.
-              </p>
-              <p style="padding-top: 10px;">
-                <a href="{{ site.substack_url }}" class="btn btn-outline-dark">Read New Posts on Substack →</a>
-                |
-                <a href="{{ site.substack_subscribe_url }}"
-                  class="btn btn-substack">Subscribe</a>
-              </p>
-            </div>
+        <div class="col-md-4">
+          <div class="tech-card">
+            <div class="card-number">01. OBSERVE</div>
+            <h5 class="text-white mb-3">Empathetic Isolation</h5>
+            <p class="small text-muted">Understanding business friction and human impact before the keyboard.
+              Troubleshooting begins with empathy.</p>
           </div>
-
-          <h4 class="section-title">Archive</h4>
-          <div class="row g-4">
-            <p class="text-center text-muted">Older posts from this domain. New posts are on Substack.</p>
-            <ul class="list-group list-group-flush shadow-sm bg-white rounded">
-              {% for post in site.posts limit:10 %}
-              <li class="list-group-item">✨ <a href="{{ post.url }}" data-toggle="tooltip" data-placement="top"
-                  title="Read more about {{ post.title }}">{{ post.title }}</a></li>
-              {% endfor %}
-            </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="tech-card">
+            <div class="card-number">02. REASON</div>
+            <h5 class="text-white mb-3">Diagnostic Reasoning</h5>
+            <p class="small text-muted">Leveraging AI to reason over telemetry and logs. Turning natural language
+              into deep-dive technical diagnostics.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="tech-card">
+            <div class="card-number">03. RESOLVE</div>
+            <h5 class="text-white mb-3">Generative Solutions</h5>
+            <p class="small text-muted">Transforming findings into self-healing code. Using generative AI to turn
+              diagnostic logic into execution.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Footer -->
 
+  <div class="container">
+    <div class="section-breaker"></div>
+  </div>
+
+  <section id="sandbox" class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <h2 class="section-label mb-3">Apurv's Sandbox</h2>
+          <p class="hero-lead mt-3">Where curiosity meets code. I write about troubleshooting tricky tech,
+            experimenting across stacks, and exploring APIs that don’t always behave. If you’ve ever hit a bug no one
+            else blogged about—this newsletter’s for you.</p>
+
+          <p><a href="/programming" class="text-decoration-none fw-bold mt-3 d-inline-block">View All Posts &rarr;</a>
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+        {% for post in site.posts limit:3 %}
+        <div class="col-md-4">
+          <div class="tech-card">
+            <div class="mb-3">
+              {% for category in post.category_title %}
+              <span class="badge-tech">{{ category }}</span>
+              {% endfor %}
+            </div>
+
+            <h4 class="mt-2 h5 fw-bold text-white"> {{ post.title }}</h4>
+            <p class="text-muted small mb-4">{{ post.excerpt | strip_html | truncate: 80 }}</p>
+            <a href="{{ post.url }}" class="text-white text-decoration-none small fw-bold stretched-link">READ
+              &rarr;</a>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="section-breaker"></div>
+  </div>
+
+  <section id="archive" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-4">
+          <h2 class="fw-bold mb-3">Microsoft Learn Archive</h2>
+          <p class="text-secondary mb-4">Deep technical insights from my years working on Dynamics 365 and Power
+            Platform. These posts cover debugging patterns that shaped my approach to observable systems. <strong><a
+                href="https://learn.microsoft.com/en-us/archive/blogs/apurvghai/" target="_blank"
+                class="text-primary text-decoration-none">View Full Archive &nearrow;</a></strong></p>
+        </div>
+        <div class="col-lg-7 ps-lg-5">
+          <div class="archive-list">
+            {% assign filtered_posts = site.posts
+            | where_exp: "post", "post.ag_original_link contains 'learn.microsoft.com'" %}
+
+            {% for post in filtered_posts limit:4 %}
+            <div class="archive-item">
+              <div class="mb-2">
+                {% for category in post.category_title %}
+                <span class="badge-tech">{{ category }}</span>
+                {% endfor %}
+              </div>
+              <h5 class="h6 mb-0"> <a href="{{ post.url }}" class="text-white text-decoration-none">{{ post.title }}</a>
+              </h5>
+            </div>
+            {% endfor %}
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscribe" class="py-5">
+    <div class="container text-center">
+      {% include substack.html %}
+    </div>
+  </section>
   {% include scripts.html %}
-  <!-- Footer -->
-  {% include footer.html %}
 
+  {% include footer.html %}
 </body>
 
 </html>

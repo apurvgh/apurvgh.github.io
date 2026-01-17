@@ -6,10 +6,11 @@
     {% include theme.html %}
     {% include googleanalytics.html %}
     {% include jsondata.html %}
-  
+
     <!-- Custom styles for this template -->
 
     <title>{{ site.title }}</title>
+    <link href="/css/home.css" rel="stylesheet" />
 
 
 </head>
@@ -21,36 +22,37 @@
 
     <div>
         <!-- Content Section: Posts + Categories Side by Side -->
-        <section class="content-section flex-wrap" style="margin-bottom: 65px;" title="{{ page.title }}">
+        <section class="content-section flex-wrap" style="margin-top: 95px;" title="{{ page.title }}">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-md-8">
-                        <h3 class="section-title post-title">{{ page.title }}</h3>
+                        <h3 class="section-title post-title text-white">{{ page.title }}</h3>
                         <div class="row g-4">
                             <div class="col-12">
                                 <div class="h-100 flex-md-row">
 
                                     <div class="card-body">
 
-                                        <p class="ag_categories post-date">
+                                        <p class="ag_categories post-date text-muted">
                                             {{ page.date | date: "%B %d, %Y" }}
                                             · {{ page.category_title }} ·
                                             {% assign words = page.content | number_of_words %}
-                                            {{ words | divided_by:200 | ceil }} min read 
+                                            {{ words | divided_by:200 | ceil }} min read
 
                                             {% if page.author == "apurvghai" %}
                                             <!-- Author information -->
                                             · </b> {{ page.author }} <b></b> · {{ page.lang }}
-                                            
+
                                             {% endif %}
 
 
                                         </p>
-                                        <span class="post-content">
+                                        <span class="post-content text-muted">
                                             {% if page.ag_original_link and page.ag_original_link != "" %}
-                                            {{ page.excerpt | strip_html | truncate: 550 }}
+                                            <p class="text-muted">{{ page.excerpt | strip_html | truncate: 550 }}</p>
 
-                                            <p class="ag_categories post-date" style="margin-top: 20px"> This article
+                                            <p class="ag_categories post-date text-muted" style="margin-top: 20px"> This
+                                                article
                                                 was originally published on
                                                 Microsoft Learn (foremerly known as <strong>Microsoft MSDN</strong>) <a
                                                     href="{{ page.ag_original_link }}" target="_blank"
